@@ -1,0 +1,123 @@
+Last login: Sun May 26 22:49:47 on ttys000
+Ibrahims-MacBook-Pro:~ ibrahimsalih$ git clone https://github.com/ibrostar/2020-Presidential-Candidates.git
+fatal: destination path '2020-Presidential-Candidates' already exists and is not an empty directory.
+Ibrahims-MacBook-Pro:~ ibrahimsalih$ rm -rf 2020-Presidential-Candidates/
+Ibrahims-MacBook-Pro:~ ibrahimsalih$ git clone https://github.com/ibrostar/2020-Presidential-Candidates
+Cloning into '2020-Presidential-Candidates'...
+warning: You appear to have cloned an empty repository.
+Ibrahims-MacBook-Pro:~ ibrahimsalih$ cd 2020-Presidential-Candidates/
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ hello.html
+-bash: hello.html: command not found
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ touch hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ ls
+hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ atom .
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ ls
+hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ ls
+hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git add hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git commit -m "plus hello.html"
+[master (root-commit) ffd5bf9] plus hello.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 216 bytes | 216.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ibrostar/2020-Presidential-Candidates
+ * [new branch]      master -> master
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/ibrostar/2020-Presidential-Candidates
+   ffd5bf9..dedbdef  master     -> origin/master
+Updating ffd5bf9..dedbdef
+Fast-forward
+ hello.html | 169 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 169 insertions(+)
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/ibrostar/2020-Presidential-Candidates
+   dedbdef..7fe975a  master     -> origin/master
+Updating dedbdef..7fe975a
+Fast-forward
+ hello.html | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git log
+commit 7fe975a3d8fa2116fad619dc7e7052e37fa455b3 (HEAD -> master, origin/master)
+Author: Salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:49:47 2019 -0700
+
+    Update hello.html
+
+commit dedbdef8abac0b170c729984d8fc0813c5c39f28
+Author: Salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:41:38 2019 -0700
+
+    Update hello.html
+
+    2020 potential presidential candidates
+
+commit ffd5bf9bca47593f49aa3d8638954d01e725807c
+Author: ibrahim salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:35:57 2019 -0700
+
+    plus hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git reset --hard <7fe975a3d8fa2116fad619dc7e7052e37fa455b3>
+-bash: syntax error near unexpected token `newline'
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git reset --hard origin/master
+HEAD is now at 7fe975a Update hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git add hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git commit -m "Fix merge conflicts"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git log
+commit 7fe975a3d8fa2116fad619dc7e7052e37fa455b3 (HEAD -> master, origin/master)
+Author: Salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:49:47 2019 -0700
+
+    Update hello.html
+
+commit dedbdef8abac0b170c729984d8fc0813c5c39f28
+Author: Salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:41:38 2019 -0700
+
+    Update hello.html
+
+    2020 potential presidential candidates
+
+commit ffd5bf9bca47593f49aa3d8638954d01e725807c
+Author: ibrahim salih <ibrahimeri98@gmail.com>
+Date:   Sun May 26 23:35:57 2019 -0700
+
+    plus hello.html
+Ibrahims-MacBook-Pro:2020-Presidential-Candidates ibrahimsalih$ git reset --hard ffd5bf9bc
+HEAD is now at ffd5bf9 plus hello.html
+Ibrahims-MacBook-Pro:2020-Pres
